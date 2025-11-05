@@ -1,0 +1,52 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 1rem;
+}
+
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --text: #111;
+  --nav: #fff;
+  --card: #fff;
+}
+
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --text: #f0f6fc;
+  --nav: #161b22;
+  --card: #21262d;
+}
+
+nav {
+  background: var(--nav);
+  padding: 0.5rem 1rem;
+}
+
+nav a {
+  color: var(--text);
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+}
+
+th, td {
+  border-bottom: 1px solid #555;
+  padding: 6px 10px;
+}
+
+.flash {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.flash.success { background: #198754; color: white; }
+.flash.danger { background: #dc3545; color: white; }
