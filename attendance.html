@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark" onload="loadAttendance()">
+  <div class="sidebar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="attendance.html" class="active">🗓️ Attendance</a>
+    <a href="behaviour.html">⚖️ Behaviour</a>
+    <a href="timetable.html">🕒 Timetables</a>
+    <button onclick="logout()" class="logout">Logout</button>
+  </div>
+
+  <div class="main">
+    <h1>Attendance Register</h1>
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Tutor Group</th>
+          <th>House</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
