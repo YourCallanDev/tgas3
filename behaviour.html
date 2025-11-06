@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behaviour Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark" onload="loadBehaviour()">
+  <div class="sidebar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="attendance.html">🗓️ Attendance</a>
+    <a href="behaviour.html" class="active">⚖️ Behaviour</a>
+    <a href="timetable.html">🕒 Timetables</a>
+    <button onclick="logout()" class="logout">Logout</button>
+  </div>
+
+  <div class="main">
+    <h1>Behaviour Log</h1>
+    <table id="behaviourTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>House</th>
+          <th>Merits</th>
+          <th>Demerits</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
