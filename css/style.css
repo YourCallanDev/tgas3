@@ -1,138 +1,84 @@
-/* --- GLOBAL --- */
 body {
-  font-family: system-ui, sans-serif;
-  background-color: var(--bg);
-  color: var(--fg);
-  transition: background 0.3s, color 0.3s;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: #f2f2f2;
 }
 
-:root {
-  --bg: #121212;
-  --fg: #f5f5f5;
-  --card: #1e1e1e;
-  --accent: #007bff;
+#sidebar {
+    width: 250px;
+    background: #152238;
+    color: white;
+    padding: 20px;
+    height: 100vh;
 }
 
-body.light {
-  --bg: #fafafa;
-  --fg: #111;
-  --card: #fff;
+#sidebar h2 {
+    margin: 0 0 20px 0;
 }
 
-a, .btn-primary {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
+#sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* --- SIDEBAR --- */
-.sidebar {
-  width: 200px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 1rem;
-}
-.content {
-  margin-left: 210px;
-}
-.nav-link.active {
-  font-weight: bold;
-  color: var(--accent) !important;
+#sidebar ul li {
+    padding: 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #1d2f4a;
+    border-radius: 4px;
 }
 
-/* --- DASHBOARD --- */
+#sidebar ul li:hover {
+    background: #244066;
+}
+
+#main {
+    flex: 1;
+    padding: 20px;
+}
+
 .card {
-  background: var(--card);
-  border: none;
-  border-radius: 10px;
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
 }
 
-/* --- STUDENTS --- */
-.student-card {
-  background: var(--card);
-  border-radius: 10px;
-  padding: 0.75rem;
+input, select, button {
+    padding: 6px 8px;
+    margin: 5px 0;
 }
 
-/* --- ATTENDANCE --- */
-.attendance-present  { background:#2e7d32; }
-.attendance-late     { background:#fbc02d; }
-.attendance-absent   { background:#c62828; }
-.attendance-oos      { background:#616161; }
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  display: flex;
-  background-color: #121212;
-  color: white;
+.table {
+    width: 100%;
+    border-collapse: collapse;
 }
-.sidebar {
-  width: 220px;
-  background: #1e1e1e;
-  padding: 20px;
-  height: 100vh;
-  position: fixed;
+
+.table th, .table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
 }
-.sidebar a, .logout {
-  display: block;
-  color: #ccc;
-  padding: 10px 0;
-  text-decoration: none;
+
+.house-red { background: #ffdddd; }
+.house-blue { background: #dde5ff; }
+.house-green { background: #ddffdd; }
+.house-yellow { background: #fff7cc; }
+
+.period-bar {
+    display: flex;
+    margin-top: 10px;
 }
-.sidebar a:hover, .logout:hover {
-  color: #fff;
+
+.period {
+    flex: 1;
+    padding: 6px;
+    text-align: center;
+    border-right: 1px solid #ddd;
 }
-.main {
-  margin-left: 240px;
-  padding: 20px;
-  width: calc(100% - 240px);
-}
-.card {
-  background: #2c2c2c;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  display: inline-block;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #1e1e1e;
-}
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #333;
-}
-button {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-button:hover {
-  background: #2563eb;
-}
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.login-box {
-  background: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-input {
-  margin: 5px 0;
-  padding: 8px;
-  border-radius: 4px;
-  border: none;
-}
-.error { color: red; }
+
+.period.present { background: #c8f7c5; }
+.period.absent { background: #f7c5c5; }
+.period.late { background: #f7eac5; }
+.period.blank { background: #eee; }
