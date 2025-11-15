@@ -11,6 +11,7 @@ body {
     color: white;
     padding: 20px;
     height: 100vh;
+    position: fixed;
 }
 
 #sidebar h2 {
@@ -37,6 +38,7 @@ body {
 #main {
     flex: 1;
     padding: 20px;
+    margin-left: 250px;
 }
 
 .card {
@@ -46,25 +48,14 @@ body {
     border-radius: 6px;
 }
 
-input, select, button {
-    padding: 6px 8px;
-    margin: 5px 0;
-}
-
 .table {
     width: 100%;
     border-collapse: collapse;
 }
-
 .table th, .table td {
     padding: 8px;
     border-bottom: 1px solid #ccc;
 }
-
-.house-red { background: #ffdddd; }
-.house-blue { background: #dde5ff; }
-.house-green { background: #ddffdd; }
-.house-yellow { background: #fff7cc; }
 
 .period-bar {
     display: flex;
